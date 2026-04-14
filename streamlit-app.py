@@ -1,10 +1,16 @@
 import streamlit as st
 import spacy
+import spacy.cli
 
-# Load Spanish model
 @st.cache_resource
 def load_model():
-    return spacy.load("es_core_news_sm")
+    try:
+        return
+spacy.load("es_core_news_sm")
+    except:
+spacy.cli.download("es_core_news_sm")
+        return
+spacy.load("es_core_news_sm")
 
 nlp = load_model()
 
