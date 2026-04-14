@@ -1,0 +1,1 @@
+# spanish-word-analyzer
